@@ -1,0 +1,48 @@
+.container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.container h1 {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+}
+
+input {
+  padding: 12px;
+  font-size: 18px;
+}
+
+button {
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container h2 {
+  margin-top: 30px;
+}
+
+.error {
+  margin: 0;
+  font-size: 14px;
+}
+
+select {
+  padding: 12px;
+  font-size: 18px;
+}
