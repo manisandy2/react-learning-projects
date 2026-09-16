@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   Global
+========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   App
+========================= */
+
+.app {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.app h1 {
+  margin-bottom: 10px;
+}
+
+.note-count {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* =========================
+   Note Form
+========================= */
+
+form {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+input,
+textarea,
+form select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background: white;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+form select:focus,
+.search-input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+form button {
+  min-width: 110px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  font-size: 14px;
+}
+
+form button:hover {
+  opacity: 0.85;
+}
+
+.cancel-button {
+  padding: 10px 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  color: #222;
+}
+
+.cancel-button:hover {
+  background: #eee;
+}
+
+/* =========================
+   Search
+========================= */
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* =========================
+   Filter
+========================= */
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: white;
+  color: #222;
+}
+
+.filter-button:hover {
+  background: #eee;
+}
+
+.filter-button.active {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+
+/* =========================
+   Note List
+========================= */
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* =========================
+   Note Item
+========================= */
+
+.note-item {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.note-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.note-item p {
+  margin-bottom: 0;
+  color: #555;
+  line-height: 1.5;
+  min-height: 45px;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.note-category {
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: #eee;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* =========================
+   Note Actions
+========================= */
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.note-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+}
+
+.edit-button {
+  background: #eee;
+  color: #222;
+}
+
+.edit-button:hover {
+  background: #ddd;
+}
+
+.delete-button {
+  background: #222;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #444;
+}
+
+/* =========================
+   Empty State
+========================= */
+
+.empty-state {
+  padding: 50px 20px;
+  text-align: center;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.empty-state h2 {
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #666;
+}
+
+/* =========================
+   Divider
+========================= */
+
+hr {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 600px) {
+  .app {
+    width: 94%;
+    margin: 25px auto;
+  }
+
+  .note-list {
+    grid-template-columns: 1fr;
+  }
+
+  .note-header {
+    align-items: flex-start;
+  }
+}
